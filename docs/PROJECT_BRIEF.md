@@ -1,66 +1,79 @@
-# PawMarket — Project Brief (v0.1)
+# PawMarket — Project Brief
+
+**Workbook version:** v0.4.2  
+**Stage:** analytical design, scenario P&L and dashboard prototyping  
+**Kickoff:** 2026-11-16  
+**Target completion:** approximately Month 3 from kickoff *(provisional)*
 
 ## Objective
 
-Investigate why a fictional US pet-supplies e-commerce business is experiencing deteriorating performance over 12 months. Produce a transparent, reproducible analysis and practical management recommendations.
+Investigate why a fictional US pet-supplies e-commerce business is experiencing weakening operating efficiency over 12 months. Produce a transparent, reproducible analysis and practical management recommendations.
 
-## Role and audience
+## Conventions
 
-- **Analyst:** Junior Product / Data Analyst
-- **Audience:** Business owner and functional managers
-- **Currency:** USD
-- **Data:** Entirely synthetic
+- Analyst: Junior Product / Data Analyst
+- Audience: business owner and functional managers
+- Currency: USD
+- Period: 12 relative months (M01–M12)
+- Data: entirely synthetic
+- Exact calendar dates and reporting timezone: open
 
 ## Business model
 
-Online retail of cat and dog products across food, litter, treats, toys and accessories. The case may include repeat purchases and scheduled/subscription-style orders, but their importance must be supported by the modeled data rather than assumed.
+Online retail of cat and dog products across food, litter, treats, toys and accessories. Repeat purchasing is part of the model, but its behavior and economics must be measured rather than assumed.
 
-## Working storyline
+## Current scenario signal
 
-The business initially uses a mixed fulfillment model: third-party delivery partners alongside its own couriers. Management later decides to terminate third-party contracts and move to fully in-house delivery. The working narrative also includes changes to existing courier compensation and hiring plans.
+The synthetic P&L represents **weakening quality of growth, not falling revenue**. From M01 to M12, net revenue rises by approximately 16.5%, operating profit rises by approximately 3.2%, and operating margin contracts by approximately 0.67 percentage points.
 
-Before analysis, the project must define:
-- Effective date(s) of the transition.
-- Third-party fees versus in-house courier payroll and other direct costs.
-- Treatment of existing and newly hired couriers.
-- Delivery capacity, failed attempts, delivery time and customer experience.
-- Whether any simultaneous changes confound a before/after comparison.
+The operating-margin reference is 3%–6%. M03 is approximately 6.02%, slightly above the upper reference; the other 11 months are within the band. The range is a diagnostic reference, not a constraint that every month must satisfy.
 
-This is a hypothesis-rich business event, not proof that the transition caused the decline.
+## Known management decision
 
-## Analytical questions
+The business initially uses mixed fulfillment: third-party delivery partners plus in-house couriers. Management decides to terminate third-party contracts and move to fully in-house delivery. The working storyline also includes a reduction in pay for existing couriers as part of a cost and replacement-hiring decision.
 
-1. When did performance begin to deteriorate, and which metrics moved first?
-2. Is the change driven by acquisition volume/efficiency, order frequency, basket size, pricing, product mix, refunds or costs?
-3. Which marketing channels and campaigns create incremental value?
-4. Are repeat purchase and cohort economics weakening?
-5. Did fulfillment costs or service levels change after the delivery-model transition?
-6. Which actions have the strongest evidence and most attractive expected impact?
+The analyst may know this decision. The exact effective date, staffing sequence, capacity consequences and hidden ground truth are not public. The decision is a candidate explanation, not proof of causation.
+
+Test effects on delivery fees, courier payroll, capacity, paid hours, delivery time, on-time performance, failed attempts, complaints, compensation, cancellations, repeat behavior and contribution per order.
+
+## Core questions
+
+1. When did operating efficiency begin to weaken, and which metrics moved first?
+2. Are changes associated with acquisition efficiency, order frequency, basket size, discounts, refunds, product mix or costs?
+3. Which paid channels and campaigns deliver customers and attributed revenue at acceptable economics?
+4. Are repeat purchase and customer cohorts changing at comparable cohort ages?
+5. Did delivery costs, capacity or service levels change around the fulfillment decision?
+6. Which actions have the strongest evidence, and what are the limitations?
 
 ## Methodology rules
 
-- State each metric's numerator, denominator, time window and exclusions.
-- Distinguish revenue, gross profit and contribution.
-- Define CAC consistently and distinguish new-customer CAC from blended acquisition cost.
-- Define ROAS and ROMI explicitly; do not use them interchangeably.
-- Keep first-touch channel and campaign/order attribution separate.
+- Define numerator, denominator, grain, window and exclusions for every metric.
+- Distinguish ROAS from contribution-based ROMI.
+- Separate all-source `total_new_customers` from paid `paid_first_touch_new_customers`.
+- Paid CAC uses paid first-touch customers only; CRM and organic customers are excluded.
+- Keep third-party fees and in-house payroll separate at source level.
+- Keep refunds, physical returns and incremental compensation separate.
+- Aggregate one-to-many facts before joining.
+- Compare cohorts at equal ages and exclude immature windows.
 - Reconcile order-level and finance-level totals.
 - Mark assumptions, limitations and causal uncertainty.
 
-## Scope
+## Current workbook scope
 
-**In scope:** sales, marketing, customer behavior, unit economics, financial performance and delivery operations.
+The v0.4.2 workbook includes project control sheets, data dictionary/model, metrics dictionary, a 12-month scenario P&L, editable assumptions, monthly/campaign/delivery starter inputs, and executive/marketing/delivery dashboard prototypes. It also separates all-source and paid first-touch new-customer denominators and adds trend checks.
 
-**Out of scope for the first iteration:** live integrations, real customer data, production forecasting and causal claims unsupported by the synthetic design.
+Starter inputs are illustrative, not validated event-level records. Dashboards must be rebuilt from validated sources before final findings are reported.
 
-## Deliverables
+## Out of scope for this iteration
 
-1. Synthetic source tables with documented generation logic.
-2. Data-quality checks and a data dictionary.
-3. Excel workbook with analysis sheets and a concise executive dashboard.
-4. Written findings, recommendations and limitations.
-5. GitHub documentation sufficient for a reviewer to understand and reproduce the case.
+Live integrations, real customer data, production forecasting, final event-level source data, validated root-cause diagnosis and unsupported causal claims.
 
-## Status
+## Next stage
 
-Version 0.1 is a kickoff scaffold. No analytical results or recommendations have been validated.
+1. Approve exact calendar dates and reporting timezone.
+2. Generate linked synthetic source records at the documented grains.
+3. Validate keys, timestamps, statuses and monetary reconciliation.
+4. Rebuild monthly, campaign and delivery aggregates.
+5. Analyze findings, recommendations and limitations.
+
+**Status:** analytical design and scenario model only. No root cause or management recommendation has been validated.
