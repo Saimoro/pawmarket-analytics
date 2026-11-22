@@ -1,4 +1,4 @@
-# Workbook Guide — PawMarket v0.4.2
+# Workbook Guide — PawMarket v0.4.3
 
 Start with Project Brief, Decision Log and Analysis Plan. Review Data Model, Data Dictionary and Metrics Dictionary before interpreting financial and dashboard sheets. Dashboards are prototypes based on synthetic scenario inputs.
 
@@ -47,4 +47,4 @@ Complete transaction-level customers, orders, order items, deliveries, courier p
 
 ## Version note
 
-v0.4.2 clarifies the scenario interpretation, separates paid first-touch customers from all-source new customers, adds formula-driven monthly paid CAC and adds P&L trend checks. Dashboard layouts and starter scenario inputs are retained.
+v0.4.3 is the current workbook version and includes a visual-formatting revision. The scenario interpretation, paid first-touch customer distinction, formula-driven monthly paid CAC and P&L trend checks carried forward from v0.4.2. This version note does not claim that the underlying business logic or source data were changed.
