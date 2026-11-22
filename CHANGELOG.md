@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.4.3 — Workbook visual-formatting revision
+
+- Published the revised workbook as `PawMarket_Project_Kickoff_v0.4.3.xlsx`.
+- Updated the repository documentation to identify v0.4.3 as the current workbook version.
+- This release is documented as a visual-formatting revision; no changes to formulas, source data or business logic are asserted here.
+
 ## v0.4.2 — Scenario and acquisition audit
 
 - Clarified that the P&L represents weakening quality of growth rather than revenue contraction.
