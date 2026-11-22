@@ -9,10 +9,10 @@ PawMarket is a fictional online retailer of cat and dog supplies. This case inve
 ## Project status
 
 **Phase 0 — analytical design, scenario model and dashboard prototypes**  
-**Workbook:** [PawMarket_Project_Kickoff_v0.4.2.xlsx](PawMarket_Project_Kickoff_v0.4.2.xlsx)  
+**Workbook:** [PawMarket_Project_Kickoff_v0.4.3.xlsx](PawMarket_Project_Kickoff_v0.4.3.xlsx)  
 **Target completion:** approximately Month 3 from kickoff *(provisional planning target, not a deadline).*
 
-The v0.4.2 workbook includes a scenario P&L, relational data model, metric definitions, monthly/campaign/delivery starter inputs and three dashboard prototypes. The next stage is linked event-level synthetic data generation and validation.
+The v0.4.3 workbook carries forward the scenario P&L, relational data model, metric definitions, monthly/campaign/delivery starter inputs and three dashboard prototypes, with a visual-formatting revision. The next stage is linked event-level synthetic data generation and validation.
 
 ## What the current scenario shows
 
@@ -47,9 +47,9 @@ The exact effective date, staffing sequence and hidden ground truth are kept out
 - [docs/METHODOLOGY.md](docs/METHODOLOGY.md) — grain, joins, QA and causal guardrails
 - [data/README.md](data/README.md) — planned synthetic source-data generation
 - [CHANGELOG.md](CHANGELOG.md) — version history
-- [PawMarket_Project_Kickoff_v0.4.2.xlsx](PawMarket_Project_Kickoff_v0.4.2.xlsx) — current workbook
+- [PawMarket_Project_Kickoff_v0.4.3.xlsx](PawMarket_Project_Kickoff_v0.4.3.xlsx) — current workbook
 
-The v0.4.2 workbook is available in the root of this repository. Event-level CSV/SQL datasets and generation scripts are not published yet.
+The v0.4.3 workbook is available in the root of this repository. Event-level CSV/SQL datasets and generation scripts are not published yet.
 
 ## Planned roadmap
 
